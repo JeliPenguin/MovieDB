@@ -10,7 +10,7 @@ import SearchBar from './SearchBar'
 import Button from './Button'
 
 const Home = () => {
-    const {state,loading,error,searchTerm,setSearchTerm, setIsLoadingMore} = useHomeFetch();
+    const {state,loading,searchTerm,setSearchTerm, setIsLoadingMore} = useHomeFetch();
     //console.log(state)
 
     return (
