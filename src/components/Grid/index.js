@@ -1,16 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Wrapper,Content } from './Grid.styles'
-const index = ({header,children}) => {
-    return (
-        <Wrapper>
-            <h1>{header}</h1>
-            <Content>{children}</Content>
-        </Wrapper>
-    )
-}
-index.propTypes = {
-    header: PropTypes.string,
-    children: PropTypes.array
-}
-export default index
+import React from 'react';
+import PropTypes from 'prop-types';
+// Styles
+import { Wrapper, Content } from './Grid.styles';
+
+const Grid = ({ header, children }) => (
+  <Wrapper>
+    <h1>{header}</h1>
+    <Content>{children}</Content>
+  </Wrapper>
+);
+
+Grid.propTypes = {
+  header: PropTypes.string
+};
+
+export default Grid;

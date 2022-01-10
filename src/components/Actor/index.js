@@ -1,21 +1,20 @@
-import React from 'react'
-import { Wrapper,Image } from './Actor.styles'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+// Styles
+import { Wrapper, Image } from './Actor.styles';
 
-const index = ({name,character,imageUrl}) => {
-    return (
-        <Wrapper>
-            <Image src={imageUrl} alt='actor-thumb'/>
-            <h3>{name}</h3>
-            <p>{character}</p>
-        </Wrapper>
-    )
+const Actor = ({ name, character, imageUrl }) => (
+  <Wrapper>
+    <Image src={imageUrl} alt='actor-thumb' />
+    <h3>{name}</h3>
+    <p>{character}</p>
+  </Wrapper>
+);
+
+Actor.propTypes = {
+  name: PropTypes.string,
+  character: PropTypes.string,
+  imageUrl: PropTypes.string,
 }
 
-index.propTypes={
-    name:PropTypes.string,
-    character:PropTypes.string,
-    imageUrl:PropTypes.string,
-}
-
-export default index
+export default Actor;

@@ -1,13 +1,17 @@
-import React from 'react'
-import {Wrapper} from './Button.styles'
-import PropTypes from 'prop-types'
-const Button = ({text,callBack}) => {
-    return (
-        <Wrapper type='button' onClick={callBack}>{text}</Wrapper>
-    )
-}
+import React from 'react';
+import PropTypes from 'prop-types';
+// Styles
+import { Wrapper } from './Button.styles';
+
+const Button = ({ text, callback }) => (
+  <Wrapper type='button' onClick={callback}>
+    {text}
+  </Wrapper>
+);
+
 Button.propTypes = {
-    text:PropTypes.string,
-    callBack: PropTypes.func,
-}
-export default Button
+  text: PropTypes.string,
+  callback: PropTypes.func
+};
+
+export default Button;
